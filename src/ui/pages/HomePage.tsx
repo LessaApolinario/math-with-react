@@ -5,10 +5,10 @@ import {
 
 import styles from '../styles/pages/HomePage.module.scss'
 
-import LinearFunctionGraph from '../styles/components/LinearFunctionGraph'
-import FirstDegreeFunctionGraph from '../styles/components/FirstDegreeFunctionGraph'
-import SecondDegreeFunctionGraph from '../styles/components/SecondDegreeFunctionGraph'
-import ConstantFunctionGraph from '../styles/components/ConstantFunctionGraph'
+import LinearFunctionGraph from '../components/LinearFunctionGraph'
+import FirstDegreeFunctionGraph from '../components/FirstDegreeFunctionGraph'
+import SecondDegreeFunctionGraph from '../components/SecondDegreeFunctionGraph'
+import ConstantFunctionGraph from '../components/ConstantFunctionGraph'
 
 function HomePage() {
   return (
