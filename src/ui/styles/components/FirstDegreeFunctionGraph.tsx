@@ -1,6 +1,7 @@
 import {
   FunctionGraph,
-  Point } from "mafs"
+  Point
+} from "mafs"
 
 interface FirstDegreeFunctionGraphProps {
   a: number
@@ -22,7 +23,7 @@ function FirstDegreeFunctionGraph(props: FirstDegreeFunctionGraphProps) {
   return (
     <>
       <FunctionGraph.OfX y={(x) => firstDegreeFunction(x)} weight={1} />
-      <Point x={zero()} y={0} />
+      <Point x={zero()} y={0} color={'red'} />
     </>
   )
 }

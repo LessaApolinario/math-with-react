@@ -1,6 +1,7 @@
 import {
   FunctionGraph,
-  Point } from "mafs"
+  Point
+} from "mafs"
 
 interface LinearFunctionGraphProps {
   a: number
@@ -15,7 +16,7 @@ function LinearFunctionGraph(props: LinearFunctionGraphProps) {
   return (
     <>
       <FunctionGraph.OfX y={(x) => linearFunction(x)} weight={1} />
-      <Point x={0} y={0} />
+      <Point x={0} y={0} color={'red'} />
     </>
   )
 }

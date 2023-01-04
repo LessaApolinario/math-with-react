@@ -1,6 +1,7 @@
 import {
   FunctionGraph,
-  Point } from "mafs"
+  Point
+} from "mafs"
 
 interface SecondDegreeFunctionGraphProps {
   a: number
@@ -44,7 +45,7 @@ function SecondDegreeFunctionGraph(props: SecondDegreeFunctionGraphProps) {
 
   function renderPoints(): JSX.Element | '' {
     const roots = zeros()
-    
+
 
     if (!roots?.x1 || !roots?.x2) {
       return ''
@@ -52,8 +53,8 @@ function SecondDegreeFunctionGraph(props: SecondDegreeFunctionGraphProps) {
 
     return (
       <>
-        <Point x={roots.x1} y={0} />
-        <Point x={roots.x2} y={0} />
+        <Point x={roots.x1} y={0} color={'red'} />
+        <Point x={roots.x2} y={0} color={'red'} />
       </>
     )
   }

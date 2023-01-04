@@ -1,6 +1,7 @@
 import {
   FunctionGraph,
-  Point } from "mafs"
+  Point
+} from "mafs"
 
 interface ConstantFunctionGraphProps {
   value: number
