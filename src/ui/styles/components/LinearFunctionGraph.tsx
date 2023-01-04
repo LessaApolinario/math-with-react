@@ -1,4 +1,6 @@
-import { FunctionGraph } from "mafs"
+import {
+  FunctionGraph,
+  Point } from "mafs"
 
 interface LinearFunctionGraphProps {
   a: number
@@ -10,7 +12,12 @@ function LinearFunctionGraph(props: LinearFunctionGraphProps) {
     return a * x
   }
 
-  return <FunctionGraph.OfX y={(x) => linearFunction(x)} weight={1} />
+  return (
+    <>
+      <FunctionGraph.OfX y={(x) => linearFunction(x)} weight={1} />
+      <Point x={0} y={0} />
+    </>
+  )
 }
 
 export default LinearFunctionGraph
