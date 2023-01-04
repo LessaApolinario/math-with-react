@@ -17,8 +17,8 @@ function HomePage() {
         <CartesianCoordinates subdivisions={2} />
         <LinearFunctionGraph a={1} />
         <FirstDegreeFunctionGraph a={2} b={1} />
-        <FirstDegreeFunctionGraph a={4} />
-        <SecondDegreeFunctionGraph a={5} b={2} c={-1} />
+        <FirstDegreeFunctionGraph a={2} />
+        <SecondDegreeFunctionGraph a={4} b={-5} c={1} />
         <ConstantFunctionGraph value={2} />
       </Mafs>
     </div>
