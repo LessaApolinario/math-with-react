@@ -11,8 +11,6 @@ import SecondDegreeFunctionGraph from '../styles/components/SecondDegreeFunction
 import ConstantFunctionGraph from '../styles/components/ConstantFunctionGraph'
 
 function HomePage() {
-
-
   return (
     <div className={styles.container}>
       <Mafs height={664}>
