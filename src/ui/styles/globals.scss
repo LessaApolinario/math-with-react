@@ -2,6 +2,11 @@
 
 .MafsView {
   font-family: "Computer Modern Serif", serif;
+  height: 100%;
+}
+
+.MafsView > svg {
+  height: 100%;
 }
 
 * {

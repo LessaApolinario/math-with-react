@@ -13,7 +13,7 @@ import ConstantFunctionGraph from '../components/ConstantFunctionGraph'
 function HomePage() {
   return (
     <div className={styles.container}>
-      <Mafs height={664}>
+      <Mafs>
         <CartesianCoordinates subdivisions={2} />
         <ConstantFunctionGraph value={2} />
         <LinearFunctionGraph a={1} />
