@@ -20,15 +20,18 @@ function SecondDegreeFunctionGraph(props: SecondDegreeFunctionGraphProps) {
     return (a * x * x) + ((b ?? 0) * x) + (c ?? 0)
   }
 
-  function zeros(): Zeros | undefined {
+  function zeros(): Zeros {
     const { a, b, c } = props
     let x1: number | undefined
     let x2: number | undefined
     const delta = ((b ?? 0) * (b ?? 0)) - 4 * a * (c ?? 0)
 
+    if (a === 0) {
+      throw new Error('Erro: a não pode ser negativo, a função precisar ser do segundo grau')
+    }
 
     if (delta < 0) {
-      return
+      throw new Error('Erro: Não existem raízes para delta menor que 0')
     }
 
     if (delta > 0) {
@@ -43,20 +46,21 @@ function SecondDegreeFunctionGraph(props: SecondDegreeFunctionGraphProps) {
     return { x1, x2 }
   }
 
-  function renderPoints(): JSX.Element | '' {
-    const roots = zeros()
+  function renderPoints(): JSX.Element {
+    try {
+      const { x1, x2 } = zeros()
 
-
-    if (!roots?.x1 || !roots?.x2) {
-      return ''
+      return (
+        <>
+          <Point x={x1 ?? -1} y={0} color={'red'} />
+          <Point x={x2 ?? -1} y={0} color={'red'} />
+        </>
+      )
+    } catch (error: any) {
+      console.log(error.message)
     }
 
-    return (
-      <>
-        <Point x={roots.x1} y={0} color={'red'} />
-        <Point x={roots.x2} y={0} color={'red'} />
-      </>
-    )
+    return <></>
   }
 
   return (

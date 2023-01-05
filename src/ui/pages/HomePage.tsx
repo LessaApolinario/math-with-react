@@ -15,11 +15,14 @@ function HomePage() {
     <div className={styles.container}>
       <Mafs height={664}>
         <CartesianCoordinates subdivisions={2} />
+        <ConstantFunctionGraph value={2} />
         <LinearFunctionGraph a={1} />
         <FirstDegreeFunctionGraph a={2} b={1} />
         <FirstDegreeFunctionGraph a={2} />
+        <FirstDegreeFunctionGraph a={0} b={2} />
         <SecondDegreeFunctionGraph a={4} b={-5} c={1} />
-        <ConstantFunctionGraph value={2} />
+        <SecondDegreeFunctionGraph a={2} b={1} c={5} />
+        <SecondDegreeFunctionGraph a={0} b={2} c={1} />
       </Mafs>
     </div>
   )
